@@ -65,12 +65,10 @@ exports.create = function(req, res) {
  * create page.
  */
 exports.show = function(req, res) {
-	res.send(req.item)
-	// var item = new Item(req.body);
-	// item.save(function(err){
-	// 	if (err){ next(err)} ///make bettet error tracking here Jeff.
-	// 	res.redirect('/item/'+item.id);
-	// });
+	res.render('show', {
+	    title: 'New Item',
+	    item: req.item
+	})
 };
 
 /**
@@ -80,8 +78,10 @@ exports.show = function(req, res) {
 
 exports.id = function(req, res, next, id) {
 	//res.send('next')
-	console.log(item.user)
-	Item.findOne({_id:id},function(err, result){
+	console.log(req.user)
+	Item.findOne({_id:id})
+	 .populate('user', 'email name')
+	 .exec(function(err, result){
     	if (!result) return next(new Error('not found'));
 		if (result){
 			req.item=result;
