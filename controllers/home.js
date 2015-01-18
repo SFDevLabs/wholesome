@@ -1,8 +1,22 @@
 /**
+ * Front /
+ * Home page.
+ */
+exports.frontpage = function(req, res) {
+
+	if (req.isAuthenticated()){
+		index(req, res)
+	}else{
+		home(req, res)
+	}
+
+};
+
+/**
  * GET /
  * Home page.
  */
-exports.home = function(req, res) {
+var home = function(req, res) {
  res.render('home', {
     title: 'Home'
   });
@@ -13,9 +27,9 @@ exports.home = function(req, res) {
  * GET /
  * Home page.
  */
-exports.index = function(req, res) {
-  res.send('list')
-  // res.render('home', {
-  //   title: 'Home'
-  // });
+var index = function(req, res) {
+  res.render('list', {
+    title: 'Home',
+    items: [1,2,3]
+  });
 };
