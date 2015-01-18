@@ -52,10 +52,9 @@ exports.new = function(req, res) {
  */
 exports.create = function(req, res) {
 	var item = new Item(req.body);
-
 	item.save(function(err){
-
-
+		if (err){ next(err)} ///make bettet error tracking here Jeff.
+		res.redirect('/item/'+item.id);
 	});
 
 };
