@@ -52,6 +52,8 @@ exports.new = function(req, res) {
  */
 exports.create = function(req, res) {
 	var item = new Item(req.body);
+
+	item.user=req.user;
 	item.save(function(err){
 		if (err){ next(err)} ///make bettet error tracking here Jeff.
 		res.redirect('/item/'+item.id);
@@ -78,7 +80,7 @@ exports.show = function(req, res) {
 
 exports.id = function(req, res, next, id) {
 	//res.send('next')
-	//
+	console.log(item.user)
 	Item.findOne({_id:id},function(err, result){
     	if (!result) return next(new Error('not found'));
 		if (result){
