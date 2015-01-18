@@ -12,7 +12,7 @@ A boilerplate for **Node.js** web applications.
 
 If you have attended any hackathons in the past, then you know how much time it takes to
 get a project started: decide on what to build, pick a programming language, pick a web framework,
-pick a CSS framework. A while later, you might have an initial project xup on GitHub and only then
+pick a CSS framework. A while later, you might have an initial project up on GitHub and only then
 can other team members start contributing. Or how about doing something as simple as *Sign in with Facebook*
 authentication? You can spend hours on it if you are not familiar with how OAuth 2.0 works.
 
@@ -32,9 +32,9 @@ it is possible to selectively check which authentication methods you need by run
 
 ![](https://lh5.googleusercontent.com/-oJ-7bSYisRY/U1a-WhK_LoI/AAAAAAAAECM/a04fVYgefzw/w1474-h1098-no/Screen+Shot+2014-04-22+at+3.08.33+PM.png)
 
-<h4 align="center">Default Theme</h4>
+<h4 align="center">API Examples</h4>
 
-![](https://lh6.googleusercontent.com/-J4_ttNHnWZo/U5IivU_0-XI/AAAAAAAAEIg/XikKjaSdReU/w1320-h986-no/Screenshot+2014-06-06+16.20.41.png)
+![](https://lh5.googleusercontent.com/-BJD2wK8CvC8/VLodBsyL-NI/AAAAAAAAEx0/SafE6o_qq_I/w1818-h1186-no/Screenshot%2B2015-01-17%2B00.25.49.png)
 
 <h4 align="center">Hackathon Starter Generator</h4>
 
