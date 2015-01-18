@@ -73,14 +73,18 @@ body.home{
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  .header-message{
-    border-radius: 15px;
-    align: center;
+  .landing{
     background-color: rgba(255,242,230, 0.6);
+    border-radius: 15px;
     width: 460px;
     height: 500px;
+  }
+  .header-message{
+    align: center;
     h1{
+      /*text-transform: uppercase;*/
       text-align: center;
+      font-style: italic;
       font-size: 5em;
       font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
       font-weight: 1000;
@@ -97,6 +101,26 @@ body.home{
       margin-left: auto;
       margin-right: auto;
       padding-bottom: 5px;
+    }
+  }
+  .signup{
+    .divider {
+    width:440px;
+    text-align:center;
+    margin-left: 10px;
+    margin-right: 10px;
+    }
+    .divider hr {
+      margin-left:auto;
+      margin-right:auto;
+      width:40%;
+    }
+    .left{
+      float: left;
+      display: inline-block;
+    }
+    .right{
+      float: right;
     }
   }
 

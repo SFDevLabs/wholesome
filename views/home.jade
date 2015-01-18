@@ -1,9 +1,20 @@
 extends layout_home
 
 block content
-  div.header-message
-    h1 Wholesome
-    h3.lead Find products for good health and physical wellbeing.
+  div.landing
+    div.header-message
+      h1 wholesome
+      h3.lead Find products for good health and physical wellbeing.
+    div.signup
+      a.btn.btn-block.btn-facebook.btn-social(href='/auth/facebook')
+          i.fa.fa-facebook
+          | Sign up with Facebook
+      div.divider
+        hr.left
+        | or
+        hr.right
+
+
     //- hr
     //- .row
     //-   .col-sm-6
