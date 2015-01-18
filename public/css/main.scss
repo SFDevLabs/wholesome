@@ -74,9 +74,9 @@ body.home{
   -o-background-size: cover;
   background-size: cover;
   .landing{
-    background-color: rgba(255,242,230, 0.6);
+    background-color: rgba(255,242,230, 0.8);
     border-radius: 15px;
-    width: 460px;
+    width: 420px;
     height: 500px;
   }
   .header-message{
@@ -95,11 +95,11 @@ body.home{
     h3 {
       font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
       text-align: center;
-      font-size: 32px;
+      font-size: 26px;
       font-weight: 500;
       line-height: 34px;
-      margin-left: auto;
-      margin-right: auto;
+      margin-left: 10%;
+      margin-right: 10%;
       padding-bottom: 5px;
     }
   }
@@ -117,10 +117,29 @@ body.home{
     }
     .left{
       float: left;
-      display: inline-block;
     }
     .right{
       float: right;
+    }
+    .btn-social{
+      margin-left:auto;
+      margin-right:auto;
+      width: 60%;
+    }
+    form{
+      margin-left:auto;
+      margin-right:auto;
+      width: 60%;
+      input{
+        width: 100%;
+        margin-bottom: 3px;
+      }
+    }
+    div.account-exists{
+      text-align: center;
+      margin-left:auto;
+      margin-right:auto;
+      width: 60%;
     }
   }
 
