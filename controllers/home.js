@@ -56,5 +56,42 @@ exports.create = function(req, res) {
 		if (err){ next(err)} ///make bettet error tracking here Jeff.
 		res.redirect('/item/'+item.id);
 	});
+};
+
+/**
+ * Show /
+ * create page.
+ */
+exports.show = function(req, res) {
+	res.send(req.item)
+	// var item = new Item(req.body);
+	// item.save(function(err){
+	// 	if (err){ next(err)} ///make bettet error tracking here Jeff.
+	// 	res.redirect('/item/'+item.id);
+	// });
+};
+
+/**
+ * Param lookup for item ID /
+ * create page.
+ */
+
+exports.id = function(req, res, next, id) {
+	//res.send('next')
+	//
+	Item.findOne({_id:id},function(err, result){
+    	if (!result) return next(new Error('not found'));
+		if (result){
+			req.item=result;
+		}
+		next();
+	});
+	
+	// var item = new Item(req.body);
+	// item.save(function(err){
+	// 	if (err){ next(err)} ///make bettet error tracking here Jeff.
+	// 	res.redirect('/item/'+item.id);
+	// });
 
 };
+

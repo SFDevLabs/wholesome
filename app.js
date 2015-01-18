@@ -103,6 +103,10 @@ app.get('/', homeController.frontpage);
 app.get('/new', homeController.new);
 app.post('/new', homeController.create);
 
+app.param('id',homeController.id)
+app.get('/item/:id', homeController.show);
+
+
 app.get('/login', userController.getLogin);
 app.post('/login', userController.postLogin);
 app.get('/logout', userController.logout);

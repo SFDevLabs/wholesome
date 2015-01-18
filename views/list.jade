@@ -6,4 +6,6 @@ block content
       .ul
         -for item in items
           .li
-            p=item
+           a(href='/item/'+item.id)
+            |link
+           p=item
