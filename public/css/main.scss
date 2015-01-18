@@ -22,11 +22,6 @@ body {
   padding-top: 60px;
   margin-bottom: 75px;
   -webkit-font-smoothing: antialiased;
-  background: url('http://i.imgur.com/LeNHCqJ.jpg') no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
 }
 
 footer {
@@ -67,4 +62,18 @@ footer {
 .fa,
 [class^="ion-"] {
   margin-right: 5px;
+}
+
+// Home
+// -------------------------
+// 
+body.home{
+  background: url('http://i.imgur.com/LeNHCqJ.jpg');
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  .navbar{
+    //display:none;
+  }
 }
