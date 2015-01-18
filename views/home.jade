@@ -3,8 +3,10 @@ extends layout_home
 block content
   div.landing
     div.header-message
-      h1 wholesome
-      h3.lead Find products for good health and physical wellbeing.
+      img.banner-image(src='https://dl.dropboxusercontent.com/u/22019990/wholesome.png', alt='wholesome')
+      //- h1 wholesome
+      div.tagline
+        h3.lead Find products for good health and physical wellbeing.
     div.signup
       a.btn.btn-block.btn-facebook.btn-social(href='/auth/facebook')
           i.fa.fa-facebook

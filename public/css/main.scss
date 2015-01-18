@@ -81,12 +81,18 @@ body.home{
   }
   .header-message{
     align: center;
+    img.banner-image{
+      width: 380px;
+      margin-left:5%;
+      margin-right:5%;
+      margin-top: 16px;
+    }
     h1{
       /*text-transform: uppercase;*/
       text-align: center;
       font-style: italic;
       font-size: 5em;
-      font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+      font-family: "oliver_demo", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
       font-weight: 1000;
       margin-left: auto;
       margin-right: auto;
@@ -98,14 +104,14 @@ body.home{
       font-size: 26px;
       font-weight: 500;
       line-height: 34px;
-      margin-left: 10%;
-      margin-right: 10%;
+      margin-left: 8%;
+      margin-right: 8%;
       padding-bottom: 5px;
     }
   }
   .signup{
     .divider {
-    width:440px;
+    width:400px;
     text-align:center;
     margin-left: 10px;
     margin-right: 10px;
@@ -132,6 +138,9 @@ body.home{
       width: 60%;
       input{
         width: 100%;
+        font-size: 18px;
+        padding-top: 5px;
+        padding-bottom: 5px;
         margin-bottom: 3px;
       }
     }
