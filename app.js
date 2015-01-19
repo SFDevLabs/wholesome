@@ -106,6 +106,17 @@ app.post('/new', homeController.create);
 app.param('id',homeController.id)
 app.get('/item/:id', homeController.show);
 
+/**
+ * Util APIs for app.
+ */
+
+
+app.post('/urlLookupAPI', homeController.urlLookupAPI);
+
+
+/**
+ * Primary app auth routes.
+ */
 
 app.get('/login', userController.getLogin);
 app.post('/login', userController.postLogin);
