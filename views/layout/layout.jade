@@ -1,0 +1,21 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(name='csrf-token', content=_csrf)
+    title #{title} - Wholesome - food, health, wellbeing and lifestyle products.
+    != css('main')
+  body
+    include ../partials/navbar
+
+    .container
+      include ../partials/flash
+      block content
+
+    include ../partials/footer    
+    script(type="text/javascript", src="/js/lib/jquery-2.1.3.min.js")
+    script(type="text/javascript", src="/js/lib/bootstrap.min.js")
+    block subfoot
+
