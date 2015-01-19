@@ -19,7 +19,8 @@ block content
         options={
           emailNotification:"eionmcmillan@gmail.com",
           callback: function(err, val){
-            //- alert("pumpkin");
+            alert("Hey there! Thanks for giving us your email, we'll be sure to let you know when we launch.");
+            location.reload();
           }
         }
         new Fireform('.landing-signup', 'http://fireform.org/list/246/wholesome-signup', options)
