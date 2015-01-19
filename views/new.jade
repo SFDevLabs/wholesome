@@ -1,4 +1,4 @@
-extends layout
+extends layout/layout
 
 block content
   h1=title
@@ -17,3 +17,6 @@ block content
         button.btn.btn-primary(type='submit')
           span.ion-android-create
           | Create
+block subfoot
+  script(type="text/javascript", src="/js/new.js")
+     
