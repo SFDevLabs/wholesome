@@ -68,11 +68,12 @@ footer {
 // -------------------------
 //
 body.home{
-  background: url('');
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+  background-color: #FDFDFD;
+  // background: url('');
+  // -webkit-background-size: cover;
+  // -moz-background-size: cover;
+  // -o-background-size: cover;
+  // background-size: cover;
   .landing{
     margin-left: 6%;
     margin-top: 5%;
@@ -100,12 +101,11 @@ body.home{
     .landing-center{
       img.banner-logo{
         width: 440px;
-        padding-bottom: 10px;
       }
       margin-left: auto;
       margin-right: auto;
       padding-top: 35px;
-      padding-bottom: 20px;
+      // padding-bottom: 20px;
       // padding bottom is because image is currently absolute positioning. will change
       text-align: center;
       width: 440px;
@@ -118,11 +118,27 @@ body.home{
       line-height: 34px;
     }
     .landing-signup{
-      background-color: #f0ad4e;
-      width: 150px;
-      font-size: 18px;
-      font-weight: 350;
+      display:inline-block;
+      width: 450px;
+      .landing-signup-email{
+        padding-top: 3px;
+        margin-right: 15px;
+        display:inline-block;
+        width: 200px;
+        height: 49px;
+        font-size: 18px;
+        font-weight: 350;
+      }
+      .landing-signup-button{
+        display:inline-block;
+        background-color: #f0ad4e;
+        width: 150px;
+        height: 49px;
+        font-size: 18px;
+        font-weight: 350;
+      }
     }
+
     }
     .landing-divider{
       height: 80px;
@@ -133,7 +149,6 @@ body.home{
           align: right;
     }
     .landing-products{
-        background-color: #F9FAF5;
         margin: 20px 0px 40px 40px;
       .products{
         .product{

@@ -9,9 +9,13 @@ block content
         | Find products to feed
         br
         | your inner granola.
-      button.landing-signup.btn.btn-default(type="button")
-        | Sign Up
-    div.landing-divider
+      form.landing-signup
+        .form-group
+          input.landing-signup-email.form-control(type='email', placeholder='Email', value='', size='30')
+          button.landing-signup-button.btn.btn-default(type='submit') Sign up
+          //- p.help-block We'll let you know when we launch
+    hr
+    //- div.landing-divider
     div.landing-products
       container.products
         div.product
