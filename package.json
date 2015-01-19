@@ -6,7 +6,7 @@
     "url": "https://github.com/sfdevlabs/wholesome.git"
   },
   "scripts": {
-    "start": "NODE_ENV=development nodemon app.js",
+    "start": "nodemon app.js",
     "test": "mocha"
   },
   "dependencies": {
@@ -58,7 +58,8 @@
     "twit": "^1.1.19",
     "uglify-js": "^2.4.16",
     "validator": "^3.27.0",
-    "yui": "^3.18.1"
+    "yui": "^3.18.1",
+    "imager":"0.4.0 "
   },
   "devDependencies": {
     "blessed": "^0.0.37",
