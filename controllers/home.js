@@ -1,5 +1,11 @@
 var Item = require('../models/Item');
+var cheerio = require('cheerio');
+var request = require('request');
 
+var Imager = require('imager');
+    // See https://github.com/madhums/node-imager/blob/master/imager-config-example.js for example configuration
+var imagerConfig = require('../config/imager')
+var imager = new Imager(imagerConfig, 'S3') // or 'S3' for amazon
 /**
  * Front /
  * Home page.
@@ -71,6 +77,34 @@ exports.show = function(req, res) {
 	// });
 };
 
+
+/**
+ * Param lookup for item ID /
+ * create page.
+ */
+
+exports.urlLookupAPI = function(req, res) {
+	var srcs = [];
+	request('http://www.bonnydoonfarm.com/catalog/page5.html', function (error, response, body) {
+	  if (!error && response.statusCode == 200) {
+	    
+	    $ = cheerio.load(body);
+
+	    $('img').each(function(i, elem) {
+	    	var src = $(this).attr('src');
+	    	if (src){srcs.push(src)};
+		});
+
+	    //console.log($('img'))
+
+	    res.send(srcs)
+	  }
+	})
+
+
+
+};
+
 /**
  * Param lookup for item ID /
  * create page.
@@ -86,12 +120,10 @@ exports.id = function(req, res, next, id) {
 		}
 		next();
 	});
-	
-	// var item = new Item(req.body);
-	// item.save(function(err){
-	// 	if (err){ next(err)} ///make bettet error tracking here Jeff.
-	// 	res.redirect('/item/'+item.id);
-	// });
 
 };
+
+
+
+
 
