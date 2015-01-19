@@ -13,6 +13,16 @@ block content
         .form-group
           input.landing-signup-email.form-control(type='email', placeholder='Email', value='', size='30')
           button.landing-signup-button.btn.btn-default(type='submit') Sign up
+      script(src='http://src.fireform.org/fireform.min.js')
+      script.
+        /* See more options at http://fireform.org/docs */
+        options={
+          emailNotification:"eionmcmillan@gmail.com",
+          callback: function(err, val){
+            //- alert("pumpkin");
+          }
+        }
+        new Fireform('.landing-signup', 'http://fireform.org/list/246/wholesome-signup', options)
           //- p.help-block We'll let you know when we launch
     hr
     //- div.landing-divider
@@ -80,16 +90,6 @@ block content
     //-     input.text(name='email', placeholder='Your email', size='30', type='email', value='')
     //-     br
     //-     input.submit(name='commit', type='submit', value='Let me know when you launch!')
-    //-   script(src='http://src.fireform.org/fireform.min.js')
-    //-   script.
-    //-     /* See more options at http://fireform.org/docs */
-    //-     options={
-    //-       emailNotification:"eionmcmillan@gmail.com",
-    //-       callback: function(err, val){
-    //-         //- alert("pumpkin");
-    //-       }
-    //-     }
-    //-     new Fireform('#signup-form', 'http://fireform.org/list/246/wholesome-signup', options)
 
 
 
