@@ -92,7 +92,7 @@ body.home{
   .landing-banner{
     height: 300px;
     width: 100%;
-    background-color: white;
+    background-color: whitespace;
     .banner-image{
       position: absolute;
       height: 300px;
@@ -128,8 +128,8 @@ body.home{
       height: 80px;
       width: 100%;
       background-color: pink;
-      border-top: 2px solid;
-      border-bottom: 2px solid;
+      border-top: 1px solid grey;
+      border-bottom: 1px solid grey;
           align: right;
     }
     .landing-products{
