@@ -1,4 +1,6 @@
 $(document).ready(function() {
+
+	new Dropzone("div#my-dropzone", { /* options */ });
 	// var csrfToken = $('meta[name="csrf-token"]').attr('content')
 	// var success = function(a,b,c){
 

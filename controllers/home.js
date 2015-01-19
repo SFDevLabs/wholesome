@@ -5,7 +5,8 @@ var request = require('request');
 var Imager = require('imager');
     // See https://github.com/madhums/node-imager/blob/master/imager-config-example.js for example configuration
 var imagerConfig = require('../config/imager')
-var imager = new Imager(imagerConfig, 'S3') // or 'S3' for amazon
+var imager = new Imager(imagerConfig, 'S3'); // or 'S3' for amazon
+var fs= require('fs');
 /**
  * Front /
  * Home page.
@@ -57,11 +58,33 @@ exports.new = function(req, res) {
  * create page.
  */
 exports.create = function(req, res) {
-	var item = new Item(req.body);
-	item.save(function(err){
-		if (err){ next(err)} ///make bettet error tracking here Jeff.
-		res.redirect('/item/'+item.id);
-	});
+
+	console.log(req.payload)
+		console.log(req.files)
+
+   var filePath ="./uploads/"+Math.random()+".png"
+
+   var writable = fs.createWriteStream(filePath); //7
+   req.pipe(writable); //8
+   // req.on('end', function (){ //9
+   //  console.log("end")
+   //   res.send(201,{'_id':"2"});
+   // }); 
+
+	//var item = new Item(req.body);
+
+   // var filePath ="./uploads/"+Math.random()+".png"
+   // var writable = fs.createWriteStream(filePath); //7
+   // req.file.pipe(writable); //8
+   // req.on('end', function (){ //9
+   //  console.log("end")
+   //   res.send(201,{'_id':"2"});
+   // }); 
+
+	// item.save(function(err){
+	// 	if (err){ next(err)} ///make bettet error tracking here Jeff.
+	// 	res.redirect('/item/'+item.id);
+	// });
 };
 
 /**
